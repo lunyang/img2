@@ -114,7 +114,7 @@ export default function HomePage() {
                 src="/assets/satellite-earth.png"
                 alt="卫星在地球轨道运行的生成图像"
                 fill
-                sizes="(max-width: 900px) 100vw, 480px"
+                sizes="(max-width: 900px) 100vw, 680px"
                 priority
               />
               <div className="prompt-card">
@@ -161,7 +161,7 @@ export default function HomePage() {
                   src={example.src}
                   alt={example.alt}
                   fill
-                  sizes="(max-width: 760px) 50vw, 250px"
+                  sizes="(max-width: 760px) 50vw, 20vw"
                 />
               </article>
             ))}

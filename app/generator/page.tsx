@@ -198,7 +198,7 @@ export default function GeneratorPage() {
                 src="/assets/satellite-earth.png"
                 alt="卫星与地球生成结果"
                 fill
-                sizes="(max-width: 1100px) 100vw, 880px"
+                sizes="(max-width: 1100px) 100vw, 62vw"
                 priority
               />
               <div className="floating-tools" aria-label="图像操作">
@@ -228,7 +228,7 @@ export default function GeneratorPage() {
                   key={thumb.src}
                   type="button"
                 >
-                  <Image src={thumb.src} alt={thumb.label} fill sizes="220px" />
+                  <Image src={thumb.src} alt={thumb.label} fill sizes="18vw" />
                   {thumb.active && <CheckCircle2 size={22} />}
                 </button>
               ))}
