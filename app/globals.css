@@ -14,7 +14,7 @@
   --danger: #ef4444;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
   --radius: 8px;
-  --page-gutter: clamp(24px, 2.8vw, 56px);
+  --page-gutter: clamp(14px, 1.6vw, 32px);
 }
 
 * {
@@ -254,6 +254,7 @@ button {
   align-items: center;
   gap: clamp(48px, 4.6vw, 96px);
   min-height: 430px;
+  transform: translateX(-10px);
 }
 
 .hero-copy {
@@ -672,8 +673,9 @@ button {
 
 .split-controls {
   display: grid;
-  grid-template-columns: minmax(230px, 1.15fr) minmax(160px, 0.75fr) 120px;
-  gap: 14px;
+  grid-template-columns: minmax(280px, 1.15fr) minmax(220px, 0.75fr) minmax(150px, 0.36fr);
+  gap: 18px;
+  margin-top: 24px;
 }
 
 .ratio-grid {
@@ -826,7 +828,7 @@ button {
 .generate-button {
   width: 100%;
   min-height: 46px;
-  margin-top: 28px;
+  margin-top: 34px;
   font-size: 17px;
 }
 
@@ -1018,6 +1020,23 @@ button {
   white-space: nowrap;
 }
 
+.footer-disclaimer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 2px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(38, 67, 102, 0.48);
+  color: #d8b36a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.footer-disclaimer svg {
+  color: #f1c96a;
+}
+
 @media (max-width: 1180px) {
   .site-header {
     grid-template-columns: auto auto;
@@ -1153,6 +1172,7 @@ button {
 
   .hero-section {
     gap: 22px;
+    transform: none;
   }
 
   .hero-copy h1 {

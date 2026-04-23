@@ -2,17 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Atom,
-  Box,
+  AlertTriangle,
   CheckCircle2,
   Download,
   Eye,
   Gift,
-  HelpCircle,
-  ImageDown,
   LockKeyhole,
   Maximize2,
-  Microscope,
   Minus,
   Plus,
   Save,
@@ -20,14 +16,6 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
-
-const generationTypes = [
-  { label: "科研插图", icon: Atom, active: true },
-  { label: "显微图像", icon: Microscope },
-  { label: "分子可视化", icon: Atom },
-  { label: "未来科技", icon: Box },
-  { label: "论文配图", icon: ImageDown },
-];
 
 const thumbs = [
   { src: "/assets/thumb-satellite.png", label: "卫星与地球", active: true },
@@ -70,37 +58,6 @@ export default function GeneratorPage() {
             <span>60 / 1000</span>
           </div>
 
-          <label className="field-label" htmlFor="negative">
-            负向提示词
-            <span>可选</span>
-          </label>
-          <div className="input-shell">
-            <input
-              id="negative"
-              placeholder="例如：模糊、低清、失真、文字、logo、水印、卡通"
-            />
-            <span>0 / 500</span>
-          </div>
-
-          <div className="control-group">
-            <h2>生成类型</h2>
-            <div className="type-grid">
-              {generationTypes.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <button
-                    className={item.active ? "choice-button is-selected" : "choice-button"}
-                    key={item.label}
-                    type="button"
-                  >
-                    <Icon size={18} />
-                    {item.label}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
           <div className="split-controls">
             <div className="control-group">
               <h2>尺寸比例</h2>
@@ -138,34 +95,6 @@ export default function GeneratorPage() {
                 </button>
               </div>
             </div>
-          </div>
-
-          <div className="slider-row">
-            <div>
-              <h2>风格强度</h2>
-              <span>精准</span>
-            </div>
-            <div className="slider-track">
-              <span />
-            </div>
-            <div>
-              <strong>40%</strong>
-              <span>艺术</span>
-            </div>
-          </div>
-
-          <div className="advanced-row">
-            {["高保真", "无水印", "快速模式", "保留结构"].map((item, index) => (
-              <button
-                className={index === 2 ? "toggle-card" : "toggle-card is-on"}
-                key={item}
-                type="button"
-              >
-                <span className="switch" />
-                {item}
-                <HelpCircle size={15} />
-              </button>
-            ))}
           </div>
 
           <button className="generate-button" type="button">
@@ -294,6 +223,10 @@ export default function GeneratorPage() {
           <Link href="#">隐私政策</Link>
           <Link href="#">联系我们</Link>
         </nav>
+        <p className="footer-disclaimer">
+          <AlertTriangle size={18} />
+          免责声明：生成内容仅供科研构思、示意与参考，严禁未经核验、标注或实质性修改后直接用于论文发表、学位论文、报告投稿或任何学术出版。
+        </p>
       </footer>
     </div>
   );
