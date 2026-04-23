@@ -8,9 +8,6 @@ type SiteHeaderProps = {
 const navItems = [
   { href: "/", label: "首页", key: "home" },
   { href: "/generator", label: "生成图像", key: "generator" },
-  { href: "#explore", label: "探索", key: "explore" },
-  { href: "#docs", label: "文档", key: "docs" },
-  { href: "#about", label: "关于我们", key: "about" },
 ] as const;
 
 export function SiteHeader({ active }: SiteHeaderProps) {

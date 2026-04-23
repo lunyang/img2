@@ -127,7 +127,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 22px;
+  gap: 34px;
   height: 68px;
 }
 
@@ -241,16 +241,16 @@ button {
 }
 
 .home-main {
-  width: min(1276px, calc(100% - 44px));
+  width: min(1512px, calc(100% - 72px));
   margin: 0 auto;
   padding: 62px 0 74px;
 }
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(470px, 1fr);
+  grid-template-columns: minmax(520px, 0.9fr) minmax(650px, 1.1fr);
   align-items: center;
-  gap: 38px;
+  gap: 64px;
   min-height: 430px;
 }
 
@@ -273,7 +273,7 @@ button {
 
 .hero-copy h1 {
   margin: 22px 0 14px;
-  max-width: 620px;
+  max-width: 680px;
   color: #f7fbff;
   font-size: clamp(42px, 5vw, 58px);
   line-height: 1.2;
@@ -296,7 +296,7 @@ button {
 }
 
 .hero-copy p {
-  max-width: 560px;
+  max-width: 640px;
   margin: 0;
   color: var(--muted);
   font-size: 17px;
@@ -314,7 +314,7 @@ button {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
-  max-width: 598px;
+  max-width: 710px;
   margin-top: 22px;
   padding-top: 20px;
   border-top: 1px solid rgba(38, 67, 102, 0.36);
@@ -344,9 +344,9 @@ button {
 .hero-image-shell {
   position: absolute;
   top: 0;
-  left: 42px;
+  left: 62px;
   z-index: 3;
-  width: min(480px, calc(100% - 58px));
+  width: min(570px, calc(100% - 96px));
   height: 390px;
   overflow: hidden;
   border: 1px solid rgba(100, 116, 139, 0.24);
@@ -380,16 +380,16 @@ button {
 }
 
 .panel-left {
-  right: 120px;
+  right: 134px;
   bottom: 52px;
-  width: 190px;
+  width: 206px;
   height: 302px;
 }
 
 .panel-right {
   right: 0;
   bottom: 78px;
-  width: 190px;
+  width: 206px;
   height: 220px;
 }
 
@@ -429,9 +429,9 @@ button {
 .feature-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 34px;
   margin-top: 52px;
-  padding: 34px 32px;
+  padding: 36px 42px;
   border: 1px solid rgba(38, 67, 102, 0.58);
   border-radius: var(--radius);
   background: rgba(12, 22, 40, 0.72);
@@ -490,7 +490,7 @@ button {
 .example-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
 }
 
 .example-card {
