@@ -14,7 +14,8 @@
   --danger: #ef4444;
   --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
   --radius: 8px;
-  --page-gutter: clamp(14px, 1.6vw, 32px);
+  --content-width: 85vw;
+  --page-gutter: calc((100vw - var(--content-width)) / 2);
 }
 
 * {
@@ -243,9 +244,9 @@ button {
 }
 
 .home-main {
-  width: 100%;
-  margin: 0;
-  padding: 62px var(--page-gutter) 74px;
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: 62px 0 74px;
 }
 
 .hero-section {
@@ -254,7 +255,6 @@ button {
   align-items: center;
   gap: clamp(48px, 4.6vw, 96px);
   min-height: 430px;
-  transform: translateX(-10px);
 }
 
 .hero-copy {
@@ -509,10 +509,10 @@ button {
   display: grid;
   grid-template-columns: minmax(460px, 38vw) minmax(0, 1fr);
   gap: 18px;
-  width: 100%;
+  width: var(--content-width);
   min-height: calc(100dvh - 154px);
-  margin: 0;
-  padding: 20px var(--page-gutter) 18px;
+  margin: 0 auto;
+  padding: 20px 0 18px;
 }
 
 .settings-panel,
@@ -979,8 +979,8 @@ button {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
   gap: 20px;
-  width: auto;
-  margin: 0 var(--page-gutter);
+  width: var(--content-width);
+  margin: 0 auto;
   padding: 14px 24px;
   border: 1px solid rgba(38, 67, 102, 0.48);
   border-radius: var(--radius) var(--radius) 0 0;
@@ -1172,7 +1172,6 @@ button {
 
   .hero-section {
     gap: 22px;
-    transform: none;
   }
 
   .hero-copy h1 {
